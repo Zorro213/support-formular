@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Helpdesk</title>
+</head>
+<script>
+    function afficherFormulaire() {
+        var select = document.getElementById("auswahl");
+        var show = document.getElementById("show");
+        var formular = document.getElementById("formular");
+
+        // wischt das vorherige Formular
+        formular.innerHTML = "";
+
+        // überprüft des entsprechenden Wertes
+        var auswahl = select.value;
+
+        // zeig des entsprechenden Formulars
+        if (auswahl === "Trainer") {
+                formular.innerHTML = `
+                <label for="id">ID: </label>
+                <input type="text" id="id" name="id"><br><br>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="vorname">Vorname:</label>
+                <input type="text" id="vorname" name="vorname"><br><br>
+
+                <label for="Geburtsdatum">Geburtsdatum:</label>
+                <input type="date" id="Geburtsdatum" name="Geburtsdatum"><br><br>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="trainingCenter">Training Center:</label>
+                <input type="text" id="trainingCenter" name="trainingCenter"><br><br>
+                
+                <label for="anliegen">Screenshot des Anliegens:</label>
+                <input type="file" id="Datei auswählen" name"keine ausgewählt"><br>
+                <textarea "text" id="anliegen" name="anliegen"></textarea><br><br>
+
+                <input type="submit" value="Anfrage senden">
+                
+                
+            `;
+                
+        } else if (auswahl === "Mitarbeiter") {
+                formular.innerHTML = `
+                <label for="id">ID: </label>
+                <input type="text" id="id" name="id"><br><br>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="vorname">Vorname:</label>
+                <input type="text" id="vorname" name="vorname"><br><br>
+
+                <label for="Geburtsdatum">Geburtsdatum:</label>
+                <input type="date" id="Geburtsdatum" name="Geburtsdatum"><br><br>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="trainingCenter">Training Center:</label>
+                <input type="text" id="trainingCenter" name="trainingCenter"><br><br>
+                
+                <label for="anliegen">Screenshot des Anliegens:</label>
+                <input type="file" id="Datei auswählen" name"keine ausgewählt"><br>
+                <textarea "text" id="anliegen" name="anliegen"></textarea><br><br>
+
+                <input type="submit" value="Anfrage senden">
+                
+            `;
+        }
+    }
+
+   
+</script>
+<body>
+    <div>
+    <h1><p><center>Helpdesk für Moodle</center></p></h1 >
+    <h2>Auswahl der Rolle</h2>
+    <label for="auswahl">Wer sind Sie:</label>
+    <select id="auswahl" onchange="afficherFormulaire()">
+        <option value="">Identifizieren Sie sich</option>
+        <option value="Trainer">Trainer</option>
+        <option value="Mitarbeiter">Mitarbeiter</option>
+    </select>
+    </div>
+    <br>
+    <div id="formular"></div><br>
+
+
+    
+</body>
+
+
+
+</html>
+
+
+
+
+
+    <!--<footer>
+        <a href="https://www.gfn.de/impressum" target="_blank">gfn.de/impressum</a>
+
+        <a href="https://de-de.facebook.com/gfn.gmbh/" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/gfn_GmbH?lang=de" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://www.youtube.com/user/GFNAG" target="_blank" class="fa fa-youtube"></a>
+        <a href="https://https://www.linkedin.com/company/gfn-gmbh" target="_blank" class="fa fa-linkedin"></a>
+    </footer>-->
+    
+
